@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
-body { @apply bg-slate-50 text-slate-900; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+/* Todas las reglas “crudas” van dentro de @layer para que Tailwind las procese */
+@layer base {
+  html, body, #root { height: 100%; }
 
-.prose p { margin: 0.5rem 0; }
+  body {
+    @apply bg-black text-white;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+  }
+
+  a { @apply text-sky-400 hover:text-sky-300 underline; }
+}
+
+/* Utilidades de prosa en modo oscuro */
+@layer components {
+  .prose { @apply text-zinc-200; }
+}

@@ -1,12 +1,77 @@
-# React + Vite
+# 🧟 The Walking Dead App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web creada con **React + Vite** y estilizada con **TailwindCSS**.  
+El proyecto consume la API pública de **TVMaze** para mostrar información sobre **personajes y episodios de la serie The Walking Dead**, incluyendo descripciones en español.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) → Librería principal de la aplicación.
+- [Vite](https://vitejs.dev/) → Generador de proyecto y servidor de desarrollo.
+- [TailwindCSS](https://tailwindcss.com/) → Framework CSS para estilos rápidos y responsivos.
+- [React Router](https://reactrouter.com/en/main) → Manejo de rutas internas.
+- [react-error-boundary](https://github.com/bvaughn/react-error-boundary) → Manejo de errores en la UI.
+- [TVMaze API](https://www.tvmaze.com/api) → Fuente de datos para personajes y episodios.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📂 Estructura de carpetas
+
+src/
+├── assets/ # Recursos estáticos
+│ └── react.svg
+│
+├── components/ # Componentes reutilizables
+│ └── Navbar.jsx
+│
+├── pages/ # Páginas de la aplicación
+│ ├── Characters.jsx
+│ ├── EpisodeDetail.jsx
+│ ├── Episodes.jsx
+│ └── TWDHome.jsx
+│
+├── services/ # Lógica de consumo API
+│ └── tvmaze.js
+│
+├── utils/ # Utilidades
+│ └── i18n.js
+│
+├── index.css # Estilos base de Tailwind
+├── main.jsx # Punto de entrada de React
+├── router.jsx # Configuración de rutas
+
+## 📌 Funcionalidades implementadas
+
+✅ Página inicial con introducción y foto de **The Walking Dead**  
+✅ **Navbar con menú de navegación**   
+✅ Ruta `/characters` → listado de personajes desde la API  
+✅ Ruta `/episodes` → listado de episodios desde la API  
+✅ Ruta `/episodes/:id` → detalle de episodio individual  
+✅ Manejo de errores con **ErrorBoundary**  
+✅ Estilos base con **TailwindCSS**  
+✅ Textos traducidos al español vía archivo `utils/i18n.js`  
+✅ Arquitectura modularizada (components, pages, services, utils)
+
+---
+
+## 📊 Comparación con los requisitos del proyecto
+
+### **Requisitos mínimos:**
+- **Uso de Vite para la generación del proyecto** ✅  
+- **Crear componentes funcionales** ✅ (Navbar, páginas, etc.)  
+- **Utilizar una API pública y mostrar los datos obtenidos** ✅ (TVMaze API)  
+- **Uso de Hooks (mínimo useEffect)** ✅ (para llamadas a la API)  
+- **Implementar rutas con React Router** ✅  
+- **Manejar errores con Error Boundaries** ✅  
+- **Implementación CSS con un framework** ✅ (TailwindCSS)
+
+### **Control de versiones:**
+- Repositorio en GitHub con 5 commits (README incluido) ✅
+
+### **Despliegue:**
+- Se despliega URL en GitHub Pages: https://kathyvenegas3.github.io/5.Proyecto_REACT_Aplicacionwebconreact_N5/
+
+👩‍💻 Autora
+
+Proyecto desarrollado por Katherine Venegascomo parte del Bootcamp Fullstack.
