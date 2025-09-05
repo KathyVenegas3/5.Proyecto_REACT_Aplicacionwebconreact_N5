@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import router from "./router";
-import Navbar from "./components/Navbar";
 import "./index.css";
 
 function Fallback({ error, resetErrorBoundary }) {
@@ -24,7 +23,6 @@ function Fallback({ error, resetErrorBoundary }) {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ErrorBoundary FallbackComponent={Fallback}>
-      <Navbar />
       <RouterProvider router={router} />
     </ErrorBoundary>
   </React.StrictMode>
